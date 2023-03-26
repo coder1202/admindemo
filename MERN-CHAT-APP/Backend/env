@@ -1,0 +1,4 @@
+PORT=5000
+
+DATABASE=mongodb+srv://CHAT:XRrXvHnfH2hcA5pr@cluster0.6gkwupq.mongodb.net/MERN_CHAT?retryWrites=true&w=majority
+JWT_SECRET=parthh

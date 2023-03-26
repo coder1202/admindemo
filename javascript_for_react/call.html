@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>callback</title>
+    <script>
+        //async js programming
+        //callback,promise,and await
+
+        const data = [{
+            name: "parth",
+            prof: "web"
+        }, {
+            name: "yash",
+            prof: "android"
+        }];
+
+        function getdata() {
+            setTimeout(() => {
+                let output = "";
+                data.forEach((data, index) => {
+                    output += `<li>${data.name}</li>`
+                });
+                document.body.innerHTML = output
+            }, 1000);
+        }
+        getdata();
+
+        function createdata(newdata, callback) {
+            setTimeout(() => {
+                data.push(newdata);
+                callback();
+            }, 2000);
+        }
+        createdata({
+            name: "parth23",
+            prof: "frevr"
+        }, getdata)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
