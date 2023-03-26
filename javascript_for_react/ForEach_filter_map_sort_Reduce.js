@@ -1,5 +1,7 @@
 // Higher order Function - episode 5
+// Higher order are function that either accept one or more function as argument or return a function 
 // forEach
+
 // filter
 // map
 // sort
@@ -18,6 +20,7 @@ const ages = [33, 12, 34, 56, 67, 45, 34, 44, 22, 45, 33, 91, 23, 28];
 //     console.log(companies[i]);
 // }
 
+//The forEach() method calls a function (a callback function) once for each array element.
 //forEach
 // companies.forEach(function(company, index) {
 //     console.log(index, company.name);
@@ -28,6 +31,8 @@ const ages = [33, 12, 34, 56, 67, 45, 34, 44, 22, 45, 33, 91, 23, 28];
 // });
 
 //filter
+//The filter() method creates a new array with array elements that pass a test.
+
 // for (let i = 0; i <= ages.length; i++) {
 //     if (ages[i] >= 20) {
 //         console.log(ages[i]);
@@ -58,6 +63,10 @@ const ages = [33, 12, 34, 56, 67, 45, 34, 44, 22, 45, 33, 91, 23, 28];
 // console.log(service);
 
 //MaP
+//The map() method creates a new array by performing a function on each array element.
+//The map() method does not execute the function for array elements without values.
+//The map() method does not change the original array.
+
 // companies.map(function(company, index) {
 //     console.log(company, index);
 // });
@@ -83,3 +92,20 @@ const ages = [33, 12, 34, 56, 67, 45, 34, 44, 22, 45, 33, 91, 23, 28];
 // console.log(soreted2);
 const soreted12 = ages.sort((c1, c2) => c1 - c2);
 console.log(soreted12);
+
+
+
+//The reduce() method runs a function on each array element to produce (reduce it to) a single value.
+//The reduce() method works from left-to-right in the array. See also reduceRight().
+//The reduce() method does not reduce the original array.
+
+let total = 0;
+for (let i = 0; i < ages.length; i++) {
+    total += ages[i];
+}
+console.log(total);
+
+const sum2 = ages.reduce(function(total, age) {
+    return total + age
+});
+console.log(sum2);
